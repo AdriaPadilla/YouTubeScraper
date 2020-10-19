@@ -13,6 +13,7 @@ F.e.: https://www.youtube.com/watch?v=XPXM47rhFwY -> XPXM47rhFwY = Video ID
 - The Script has a **progress counter** (TQDM progress bar).
 - **You are free to take this code as an example and do whatever you want with it**, under GNU liscense.
 - The script is provided "as it is", and no technical support is given.
-- This is an hypothetical academic walkarraund to solve a problem. The author is not responsible for malicious use or any other damage it may cause.
+- This is an hypothetical academic walkarraond to solve a problem. It is not necessarily intended to be put into operation, or to work intensively.
+- The author is not responsible for malicious use or any other damage it may cause.
 
 
