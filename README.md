@@ -10,7 +10,6 @@ There are some important considerations:
 F.e.: https://www.youtube.com/watch?v=XPXM47rhFwY -> XPXM47rhFwY = Video ID
 - **Comments cannot be scraped**: The reason, is that I use *BeautifulSoup* library. "Comment counter" in YouTube interface is generated trought Asynchronous JavaScript (AJAX), and the BeautifulSoup library can't handle this type of content.
 - **The script has been written using the ".es" version of YouTube**. If you respect this URL structure, the script will provably work as long as the source code is not changed. But if you change to the ".com" version of the YouTube URL, you may need to make some changes in this script.
-- The Script has a **progress counter** (TQDM progress bar).
 - **You are free to take this code as an example and do whatever you want with it**, under GNU liscense.
 - The script is provided "as it is", and no technical support is given.
 - This is an hypothetical academic walkarraond to solve a problem. It is not necessarily intended to be put into operation, or to work intensively.
