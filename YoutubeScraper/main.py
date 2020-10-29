@@ -6,7 +6,7 @@ import scraper as s
 import frame as f
 
 
-data = pd.read_excel("subset_10.xlsx")
+data = pd.read_excel("subset_10.xlsx") # This is your Youtube Videos ID list to scrape
 video_list = data["hash"].tolist()
 
 works_index = []
