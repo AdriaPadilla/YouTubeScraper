@@ -15,4 +15,10 @@ F.e.: https://www.youtube.com/watch?v=XPXM47rhFwY -> XPXM47rhFwY = Video ID
 - This is an hypothetical academic walkarraond to solve a problem. It is not necessarily intended to be put into operation, or to work intensively.
 - The author is not responsible for malicious use or any other damage it may cause.
 
+**Performance tests**
+- With ThreadPoolexEcutor and ProcessPoolExecutor: 398s/1000 URL. This includes: request url content + html parsing (bs4) and dataset export to xlsx file.
+- Possible improvements: Parse html responses with xlmx bs4. 
 
+**Special thanks**
+- Prof. Bernhard Rieder (Amsterdam University) https://github.com/bernorieder/
+- Raquel Horta https://github.com/raquelhortab
