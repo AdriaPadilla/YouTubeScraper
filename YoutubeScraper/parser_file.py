@@ -8,7 +8,7 @@ def parse(page, id, item):
     print("Parsing item: "+str(item)+" data for: "+id)
     data = {}
     try:
-        soup = BeautifulSoup(page, 'lxml')
+        soup = BeautifulSoup(page, 'html.parser')
         # basic_info = soup.find_all("div", class_="watch-main-col")
         video_id = str(soup.find_all("meta", itemprop="videoId")[0]).split("=")[1].split('"')[1]
         channel_title = str(soup.find_all("link", itemprop="name")[0]).split("=")[1].split('"')[1]
