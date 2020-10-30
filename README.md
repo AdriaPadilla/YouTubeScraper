@@ -11,7 +11,7 @@ F.e.: https://www.youtube.com/watch?v=XPXM47rhFwY -> XPXM47rhFwY = Video ID
 - The author is not responsible for malicious use or any other damage it may cause.
 
 **Performance tests**
-- With ThreadPoolexEcutor and ProcessPoolExecutor: Tested with 1000 URL = 0.39s/url. This includes: request url content + html parsing (bs4) and dataset export to xlsx file.
+- This script uses Multi-process and multi-thread. Performance will change in each machine. In my case, with ThreadPoolexEcutor and ProcessPoolExecutor: Tested with 1000 URL = 0.39s/url. This includes: request url content + html parsing (bs4) and dataset export to xlsx file.
 - Possible improvements: Parse html responses with xlmx bs4. 
 
 **Special thanks**
