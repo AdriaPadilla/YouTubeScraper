@@ -3,7 +3,7 @@
 Hi All! 
 
 This is an example of how we can scrape YouTube Video metrics. This thecnique is especially useful for those who need to collect video data, but have API quota limitations.
-I have written this code as an example, in the framework of a PhD thesis. **This needs a lot of improvement, and is not intended for intensive work**. It is only a methodological approximation.
+I have written this code as an example, in the framework of a PhD thesis. **This is only a hypothetical exercise, and is not intended for intensive work. It's only a methodological approximation.**
 
 There are some important considerations:
 - **The starting point is the ID of a video**. For the script to work you must have a CSV document with all the IDs. 
