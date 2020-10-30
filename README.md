@@ -2,7 +2,7 @@
 
 Hi All! 
 
-This is an example of how we can scrape YouTube Video metrics. I have written this code as an example, in the framework of a PhD thesis. **This is only a hypothetical exercise, and is not intended for real work. It's only a methodological approximation.**
+This is an example of how we can scrape YouTube Video metrics. I have written this code as an example, in the framework of a PhD thesis. **This is an hypothetical academic walkarraond to solve a problem. It's not necessarily intended to operate in real scenario, it's a methodological approximation. But yeah, it works ;)**
 
 There are some important considerations:
 - **The starting point is the ID of a video**. For the script to work you must have a CSV document with all the IDs. 
@@ -11,7 +11,6 @@ F.e.: https://www.youtube.com/watch?v=XPXM47rhFwY -> XPXM47rhFwY = Video ID
 - **The script has been written using the ".es" version of YouTube**. If you respect this URL structure, the script will provably work as long as the source code is not changed. But if you change to the ".com" version of the YouTube URL, you may need to make some changes in this script.
 - **You are free to take this code as an example and do whatever you want with it**, under GNU liscense.
 - The script is provided "as it is", and no technical support is given.
-- This is an hypothetical academic walkarraond to solve a problem. It is not necessarily intended to be put into operation, or to work intensively.
 - The author is not responsible for malicious use or any other damage it may cause.
 
 **Performance tests**
