@@ -1,7 +1,4 @@
 # YouTube Scraper
-
-Hi All! 
-
 This is an example of how we can scrape YouTube Video metrics. I have written this code as an example, in the framework of a PhD thesis. **This is an hypothetical academic walkarraond to solve a problem. It's not necessarily intended to operate in real scenario, it's a methodological approximation. But yeah, it works ;)**
 
 There are some important considerations:
