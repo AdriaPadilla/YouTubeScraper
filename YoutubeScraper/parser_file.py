@@ -5,27 +5,65 @@ error_list = []
 
 def parse(page, id, item):
 
-    print("Parsing item: "+str(item)+" data for: "+id)
+    print("Parsing item: "+str(item)+" data for: "+str(id))
     data = {}
     try:
         soup = BeautifulSoup(page, 'html.parser')
         # basic_info = soup.find_all("div", class_="watch-main-col")
-        video_id = str(soup.find_all("meta", itemprop="videoId")[0]).split("=")[1].split('"')[1]
-        channel_title = str(soup.find_all("link", itemprop="name")[0]).split("=")[1].split('"')[1]
-        channel_id = str(soup.find_all("meta", itemprop="channelId")[0]).split("=")[1].split('"')[1]
-        video_title = str(soup.find_all("meta", itemprop="name")[0]).split("=")[1].split('"')[1]
-        video_genre = str(soup.find_all("meta", itemprop="genre")[0]).split("=")[1].split('"')[1]
-        views = str(soup.find_all("meta", itemprop="interactionCount")[0]).split("=")[1].split('"')[1].replace(".", "")
-        views = int(views)
-        likes = str(soup).split("Me gusta:")[2].split('"')[4].replace(".", "")
-        likes = int(likes)
-        dislikes = str(soup).split('No me gusta"}},"simpleText":"')[1].split('"')[0].replace(".", "")
-        dislikes = int(dislikes)
-        comments = "null"
-        video_duration = str(soup.find_all("meta", itemprop="duration")[0]).split("=")[1].split('"')[1]
-        published_at = str(soup.find_all("meta", itemprop="datePublished")[0]).split("=")[1].split('"')[1]
-        family = str(soup.find_all("meta", itemprop="isFamilyFriendly")[0]).split("=")[1].split('"')[1]
-        paid = str(soup.find_all("meta", itemprop="paid")[0]).split("=")[1].split('"')[1]
+        try:
+            video_id = str(soup.find_all("meta", itemprop="videoId")[0]).split("=")[1].split('"')[1]
+        except IndexError:
+            video_id = "null"
+        try:
+            channel_title = str(soup.find_all("link", itemprop="name")[0]).split("=")[1].split('"')[1]
+        except IndexError:
+            channel_title = "null"
+        try:
+            channel_id = str(soup.find_all("meta", itemprop="channelId")[0]).split("=")[1].split('"')[1]
+        except IndexError:
+            channel_id = "null"
+        try:
+            video_title = str(soup.find_all("meta", itemprop="name")[0]).split("=")[1].split('"')[1]
+        except IndexError:
+            video_title = "null"
+        try:
+            video_genre = str(soup.find_all("meta", itemprop="genre")[0]).split("=")[1].split('"')[1]
+        except IndexError:
+            video_genre = "null"
+        try:
+            views = str(soup.find_all("meta", itemprop="interactionCount")[0]).split("=")[1].split('"')[1].replace(".", "")
+            views = int(views)
+        except IndexError:
+            views = "null"
+        try:
+            likes = str(soup).split('{"iconType":"LIKE"}')[1].split('Me gusta')[0].split('"label":"')[1].replace(".", "")
+        except IndexError:
+            likes = "null"
+        try:
+            dislikes = str(soup).split('No me gusta"}},"simpleText":"')[1].split('"')[0].replace(".", "")
+            dislikes = int(dislikes)
+        except IndexError:
+            dislikes = "null"
+        try:
+            comments = "null"
+        except IndexError:
+            comments = "null"
+        try:
+            video_duration = str(soup.find_all("meta", itemprop="duration")[0]).split("=")[1].split('"')[1]
+        except IndexError:
+            video_duration = "null"
+        try:
+            published_at = str(soup.find_all("meta", itemprop="datePublished")[0]).split("=")[1].split('"')[1]
+        except IndexError:
+            published_at = "null"
+        try:
+            family = str(soup.find_all("meta", itemprop="isFamilyFriendly")[0]).split("=")[1].split('"')[1]
+        except IndexError:
+            family = "null"
+        try:
+            paid = str(soup.find_all("meta", itemprop="paid")[0]).split("=")[1].split('"')[1]
+        except IndexError:
+            paid = "null"
 
         # It's live content exception!
         try:
@@ -83,7 +121,6 @@ def parse(page, id, item):
         data["live_start"] = "null"
         data["live_end"] = "null"
         data["keywords"] = "null"
-        print("Work ended by worker: "+threading.current_thread().name+" | reason: Not avaliable")
+        print("Work ended by worker: "+threading.current_thread().name+" | reason: "+IndexError)
 
         return data
-
